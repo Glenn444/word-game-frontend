@@ -1,0 +1,205 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+@layer base {
+  * {
+    
+  }
+  body {
+   
+  }
+}
+
+/* src/styles/WordBridgeGame.css */
+.word-bridge-game {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.game-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-info .username {
+  font-weight: bold;
+  display: block;
+  font-size: 18px;
+}
+
+.user-info .score {
+  display: block;
+  font-size: 16px;
+  color: #666;
+}
+
+.game-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.game-controls select,
+.game-controls button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.game-controls select {
+  flex: 1;
+}
+
+.game-board {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.word-pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.start-word,
+.end-word {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bridge-steps {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 15px;
+}
+
+.bridge-step {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.bridge-step.active {
+  background-color: #f39c12;
+  color: white;
+}
+
+.bridge-step.completed {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.word-selection h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.word-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.word-option {
+  padding: 12px 20px;
+  background-color: rgb(1, 10, 36);
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.word-option:hover {
+  border-color: #3498db;
+}
+
+.word-option.selected {
+  border-color: #3498db;
+  background-color: #e1f0fa;
+}
+
+.submit-guess {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-guess:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.submit-guess:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.guess-result {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.guess-result.correct {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+.guess-result.incorrect {
+  background-color: #fadbd8;
+  color: #e74c3c;
+}
+
+.game-completed {
+  text-align: center;
+  padding: 20px;
+}
+
+.game-completed h2 {
+  color: #27ae60;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.error {
+  color: #e74c3c;
+}
